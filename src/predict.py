@@ -14,13 +14,13 @@ def summarize_text(text):
     """
 
     result = summarizer(
-    "summarize: " + text,
-    max_length=60,
-    min_length=10,
-    do_sample=False,
-    num_beams=4,
-    no_repeat_ngram_size=3
-)
+        "summarize: " + text,
+        max_length=100,
+        min_length=30,
+        do_sample=False,
+        num_beams=4,
+        no_repeat_ngram_size=3
+    )
 
     return result[0]["generated_text"]
 
